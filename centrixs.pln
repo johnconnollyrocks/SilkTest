@@ -1,0 +1,493 @@
+﻿[-] Connect to Target  Machine 
+	[ ] script: centrixs.t
+	[ ] testcase: setTarget
+	[ ] testdata: "140.199.32.75"
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] // INITIAL TESTS / TEST SETUP
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] 
+[-] Testcase Print All Diagnostic Information
+	[ ] script: centrixs.t
+	[ ] testcase: PrintAllTestInformation
+	[ ] 
+[-] Initialize Global Test Start Time Variable 
+	[ ] script: centrixs.t
+	[ ] testcase: InitTestStartTime
+[ ] 
+[-] Initialize TestsPassedCount entry in SILKTESTCENTRIXS.INI file
+	[ ] script: centrixs.t
+	[ ] testcase: InitTestsPassedCount
+	[ ] 
+[-] Initialize TestsFailedCount entry in SILKTESTCENTRIXS.INI file
+	[ ] script: centrixs.t
+	[ ] testcase: InitTestsFailedCount
+	[ ] 
+[-] Logon as Silka
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silka"
+[ ] 
+[-] Clear Silka Outlook Inbox
+	[ ] script: centrixs.t
+	[ ] testcase: clearInbox
+	[ ] 
+[-] Logon as Silkb
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silkb"
+	[ ] 
+[-] Clear Silkb Outlook Inbox
+	[ ] script: centrixs.t
+	[ ] testcase: clearInbox
+	[ ] 
+[-] Logon as Silkc
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silkc"
+	[ ] 
+[-] Clear Silkc Outlook Inbox
+	[ ] script: centrixs.t
+	[ ] testcase: clearInbox
+	[ ] 
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] // SILKA RUN TESTS
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[-] Print Test Banner
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestBanner
+	[ ] testdata: "SILK A"
+	[ ] 
+[-] Logon as Silka
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silka"
+[ ] 
+[-] Test case 2.2.1 - Silka - Create and send a mail message from User A to User B
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_1
+	[ ] 
+[-] Test case 2.2.3 - Silka - Create and send a mail message from User A to User B with an attachment
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_3
+	[ ] 
+[-] Test case 2.2.5 - Silka - Create and send a mail message from User A to User B and User C
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_5
+	[ ] 
+[-] Test case 2.2.8 - Silka - Send a Meeting Invite from User A to User B
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_8
+	[ ] 
+[-] Test case 2.2.9 - Silka - Open word file modify (add current date)
+	[ ] script: centrixs.t
+	[ ] testcase: officeWord2_2_9
+	[ ] 
+[-] Test case 2.2.9 - Silka - Send word file to User B
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_9
+	[ ] 
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] // SILKB RUN TESTS
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[-] Print Test Banner
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestBanner
+	[ ] testdata: "SILK B"
+	[ ] 
+[-] Logon as Silkb
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silkb"
+[ ] 
+[-] Test case 2.2.2 - Silkb - Create and send a message from User B to User A
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_2
+	[ ] 
+[-] Test case 2.2.4 - Silkb - Create and send a message from User B to User A with an attachment
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_4
+	[ ] 
+[-] Test case 2.2.7 - Silkb - Reply to all mail message from User A to User C, and User D 
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_7
+	[ ] 
+[-] Test case 2.2.10.1 - Silkb Open Word doc,  save to sharedrive directory
+	[ ] script: centrixs.t
+	[ ] testcase: officeWord2_2_10_1
+	[ ] 
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] // SILKC RUN TESTS
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[-] Print Test Banner
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestBanner
+	[ ] testdata: "SILK C"
+	[ ] 
+[-] Logon as Silkc
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silkc"
+[ ] 
+[-] Test case 2.2.6  - Silkc - Reply to a mail message from User C to User A
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_6
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] // SILKC VERIFY TESTS
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[-] Print Test Banner
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestBanner
+	[ ] testdata: "SILK C"
+[ ] 
+[-] Test case 2.2.5 - Silkc - Create and send a mail message from User A to User B and User C
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_5VerifyC
+	[ ] 
+[-] Test case 2.2.7 - Silkc - Send a meeting invite from user A to User B and User C
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_7VerifyC
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] // SILKB VERIFY TESTS
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[-] Print Test Banner
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestBanner
+	[ ] testdata: "SILK B"
+[ ] 
+[-] Logon as Silkb
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silkb"
+[ ] 
+[-] Test case 2.2.1 Verify - Silkb signon - Create and send a mail message from User A to User B
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_1Verify
+	[ ] 
+[-] Test case 2.2.3 Verify - Silkb signon - Create and send a mail message from User A to User B with an attachment
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_3Verify
+	[ ] 
+[-] Test case 2.2.5 Verify - Silkb signon - Create and send a mail message from User A to User B, User C, and User D
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_5VerifyB
+	[ ] 
+[-] Test case 2.2.8 Verify - Silkb signon - Send a Meeting Invite from User A to User B
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_8Verify
+	[ ] 
+[-] Test case 2.2.9 Verify - Silkb signon - Open Word doc, change date in file to current date, save to sharedrive directory, email to user B
+	[ ] script: centrixs.t
+	[ ] testcase: officeWord2_2_9Verify
+	[ ] 
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] // SILKA VERIFY TESTS
+[ ] /////////////////////////////////////////////////////////////////////////////////////////////////
+[-] Print Test Banner
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestBanner
+	[ ] testdata: "SILK A"
+[ ] 
+[-] Logon as Silka
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "Silka"
+[ ] 
+[-] Test case 2.2.2 Verify - Silka - Create and send a message from User B to User A
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_2Verify
+	[ ] 
+[-] Test case 2.2.4 Verify - Silka - Create and send a message from User B to User A with an attachment
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_4Verify
+	[ ] 
+[-] Test case 2.2.6 Verify - Silka - Reply to a mail message from User C to User A
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_6Verify
+	[ ] 
+[-] Test case 2.2.7 Verify - Silka - Reply to all mail message from User B to user A and user C
+	[ ] script: centrixs.t
+	[ ] testcase: officeOutlook2_2_7VerifyA
+	[ ] 
+[ ] ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] //
+[ ] // NON USER-SPECIFIC TESTS
+[ ] //
+[ ] ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ ] 
+[-] Test case 2.2.10.2 -  Open Word doc,  perform spell check
+	[ ] script: centrixs.t
+	[ ] testcase: officeWord2_2_10_2
+[ ] 
+[-] Test case 2.2.9 - Open All Word Docs in spreadsheet
+	[ ] script: centrixs.t
+	[ ] testcase: tc_openWordDocs
+[ ] 
+[-] Test case 2.2.11 - Open all Power Point docs in spreadsheet
+	[ ] script: centrixs.t
+	[ ] testcase: tc_openPowerPointDocs
+	[ ] 
+[-] Test case 2.2.11.1 - Silka Open Power Point doc, start Slideshow
+	[ ] script: centrixs.t
+	[ ] testcase: officePowerPoint2_2_11_1
+[ ] 
+[-] Test case 2.2.11.2 - Silka Open Power Point doc, start Slideshow
+	[ ] script: centrixs.t
+	[ ] testcase: officePowerPoint2_2_11_2
+[ ] 
+[-] Test case 2.2.12 - Open all Excel docs in spreadsheet
+	[ ] script: centrixs.t
+	[ ] testcase: tc_openExcelDocs
+	[ ] 
+[-] Test case 2.2.12.1 - Silka Open Excel complex recalc spreasheet
+	[ ] script: centrixs.t
+	[ ] testcase: officeExcel2_2_12_1
+[ ] 
+[-] Test case 2.2.13 - Open all Access docs in spreadsheet
+	[ ] script: centrixs.t
+	[ ] testcase: tc_openAccessDocs
+[ ] 
+[-] Test case 2.2.13.1 - Open Access database
+	[ ] script: centrixs.t
+	[ ] testcase: officeAccess2_2_13_1
+[ ] 
+[-] Test case 2.2.14 - Open all Adobe Reader docs in spreadsheet
+	[ ] script: centrixs.t
+	[ ] testcase: tc_openAdobeReaderDocs
+	[ ] 
+[-] Test case 2.2.14.1 - Open Adobe Reader PDF doc
+	[ ] script: centrixs.t
+	[ ] testcase: AdobeReader2_2_14_1
+[ ] 
+[-] Test case 2.2.15 - Create Winzip archive
+	[ ] script: centrixs.t
+	[ ] testcase: WinZip2_2_15
+	[ ] 
+[-] Test case Verify Domino Replcation
+	[ ] script: Domino.t
+	[ ] testcase: verifyDominoReplication
+	[ ] 
+[-] Logon as silktestmanager
+	[ ] // MUST BE ADMIN USER TO PERFORM ACTIVE DIRECTORY FUNCTIONS
+	[ ] script: centrixs.t
+	[ ] testcase: switchToUser
+	[ ] testdata: "silktestmanager"
+	[ ] 
+[-] Testcase Delete Standard User
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_deleteUser
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase Delete Admin User
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_deleteUser
+	[ ] testdata: "admin11"
+	[ ] 
+[-] Testcase Delete Standard Home Directory
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_RemoveHomeDirectory
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase Delete Admin Home Directory
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_RemoveHomeDirectory
+	[ ] testdata: "admin11"
+	[ ] 
+[-] Testcase Create Standard User
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_createStandardUser
+	[ ] testdata: "standard11", "1lahaina*"
+	[ ] 
+[-] Testcase Create Admin User
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_createAdminUser
+	[ ] testdata: "admin11", "1lahaina*"
+	[ ] 
+[-] Testcase Change User Password
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_changeUserPassword
+	[ ] testdata: "admin11", "1lahaina*"
+	[ ] 
+[-] Testcase Disable account
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_disableAccount
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase Enable account
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_enableAccount
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase Lockout account
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_lockoutAccount
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase Unlock account
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_unlockAccount
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase Verify account
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_verifyAccount
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase SetAccountExpirationDate One Month Later
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_setAccountExpirationDate
+	[ ] testdata: FALSE
+	[ ] 
+[-] Testcase SetAccountExpirationDate Immediate
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_setAccountExpirationDate
+	[ ] testdata: TRUE
+	[ ] 
+[-] Testcase Delete Standard User
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_deleteUser
+	[ ] testdata: "standard11"
+	[ ] 
+[-] Testcase Delete Admin User
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_deleteUser
+	[ ] testdata: "admin11"
+	[ ] 
+[-] Testcase RunDefrag on Drive C
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: tc_runDefrag
+	[ ] testdata: "c"
+	[ ] 
+[-] Testcase RunDefrag on Drive D
+	[ ] script: centrixs.t
+	[ ] testcase: tc_runDefrag
+	[ ] testdata: "d"
+	[ ] 
+[-] Testcase RunDefrag on Drive E
+	[ ] // NOTE: This test may take more than 1 hour to run
+	[ ] script: centrixs.t
+	[ ] testcase: tc_runDefrag
+	[ ] testdata: "e"
+	[ ] 
+[-] Test Case Run Symantec Anti Virus Full Scan
+	[ ] // NOTE: This test may take more than 1 hour  to run
+	[ ] script: AdministrativeTasks.t
+	[ ] testcase: SAV2_6_1
+	[ ] 
+[-] Test case Verify Outlook Build
+	[ ] script: centrixs.t
+	[ ] testcase: verifyOutlookBuild
+	[ ] 
+[-] Test case Verify Outlook version
+	[ ] script: centrixs.t
+	[ ] testcase: verifyOutlookVersion
+	[ ] 
+[-] Test case Verify Word version
+	[ ] script: centrixs.t
+	[ ] testcase: verifyWordVersion
+[ ] 
+[-] Test case Verify Word build 
+	[ ] script: centrixs.t
+	[ ] testcase: verifyWordBuild
+	[ ] 
+[-] Test case Verify Excel version
+	[ ] script: centrixs.t
+	[ ] testcase: verifyExcelVersion
+[ ] 
+[-] Test case Verify Excel build
+	[ ] script: centrixs.t
+	[ ] testcase: verifyExcelBuild
+	[ ] 
+[-] Test case Verify Access version
+	[ ] script: centrixs.t
+	[ ] testcase: verifyAccessVersion
+[ ] 
+[-] Test case Verify Access build
+	[ ] script: centrixs.t
+	[ ] testcase: verifyAccessBuild
+	[ ] 
+[-] Test case Verify Power Point version
+	[ ] script: centrixs.t
+	[ ] testcase: verifyPowerPointVersion
+[ ] 
+[-] Test case Verify Power Point build 
+	[ ] script: centrixs.t
+	[ ] testcase: verifyPowerPointBuild
+	[ ] 
+[-] Test case Verify Adobe Reader version 
+	[ ] script: centrixs.t
+	[ ] testcase: verifyAdobeReaderVersion
+[ ] 
+[-] Test case Win Zip version check
+	[ ] script: centrixs.t
+	[ ] testcase: verifyWinZipVersion
+	[ ] 
+[-] Test case Java version check
+	[ ] script: centrixs.t
+	[ ] testcase: verifyJavaVersion
+	[ ] 
+[-] Test case OS version check
+	[ ] script: centrixs.t
+	[ ] testcase: verifyOSVersion
+	[ ] 
+[-] Test Case Verify Services from Centrixs.xls
+	[ ] script: centrixs.t
+	[ ] testcase: verifyServices
+	[ ] 
+[-] Test case 13.1 - Verify IAVA Entries in Centrixs.xls Spreadsheet
+	[ ] script: centrixs.t
+	[ ] testcase: verifyIAVAEntries
+	[ ] 
+[-] Test case 14.1 - Veridy Compose DLL Versions
+	[ ] script: centrixs.t
+	[ ] testcase: verifyComposeDLLVersions
+	[ ] 
+[ ] Test Case Symantec
+[ ] 
+[-] Print Tests Passed
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestsPassed
+	[ ] 
+[-] Print Tests Failed
+	[ ] script: centrixs.t
+	[ ] testcase: PrintTestsFailed
+	[ ] 
+[-] Testcase Print Event Log Info - Application Errors
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "Application", "1"
+	[ ] 
+[-] Testcase Print Event Log Info - Application Warnings
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "Application", "2"
+	[ ] 
+[-] Testcase Print Event Log Info - Application Information
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "Application", "3"
+	[ ] 
+[-] Testcase Print Event Log Info - Security Audit Success
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "Security", "4"
+	[ ] 
+[-] Testcase Print Event Log Info - Security Audit Failure
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "Security", "5"
+	[ ] 
+[-] Testcase Print Event Log Info - System Errors
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "System", "1"
+	[ ] 
+[-] Testcase Print Event Log Info - System Warnings
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "System", "2"
+	[ ] 
+[-] Testcase Print Event Log Info - System Info
+	[ ] script: centrixs.t
+	[ ] testcase: GetCurrentEventLog
+	[ ] testdata: "System", "3"
+[ ] 
